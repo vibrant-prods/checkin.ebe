@@ -1,5 +1,4 @@
 
-<!-- saved from url=(0029)https://cozmo.github.io/jsQR/ -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="robots" content="noindex">
   <title>Ergebniseingabe</title>
@@ -105,7 +104,7 @@
           const now = +new Date();
           if ((String(code.data).includes("apo-schnelltest.de")) && (now - last > 3000)) { 
             last = now;
-            window.open(code.data.replace("check", "labor"),'popUpWindow','scrollbars=yes,menubar=no');
+            window.open(code.data,'popUpWindow','scrollbars=yes,menubar=no');
             outputData.innerText = code.data;
             outputMessage.hidden = true;
             outputData.parentElement.hidden = false;
