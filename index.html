@@ -1,7 +1,6 @@
-
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="robots" content="noindex">
-  <title>Ergebniseingabe</title>
+  <title>CheckIn</title>
   <script src="./QR.js"></script>
   <style>
     body {
@@ -46,7 +45,7 @@
   </style>
 </head>
 <body cz-shortcut-listen="true">
-  <h1>Ergebniseingabe öffnen...</h1>
+  <h1>Probanden einchecken...</h1>
 
   <div id="loadingMessage" hidden="">⌛ Lade video...</div>
   <canvas id="canvas" height="480" width="640"></canvas>
@@ -104,7 +103,7 @@
           const now = +new Date();
           if ((String(code.data).includes("apo-schnelltest.de")) && (now - last > 3000)) { 
             last = now;
-            window.open(code.data,'popUpWindow','scrollbars=yes,menubar=no');
+            window.open(code.data,'popUpWindow','scrollbars=yes,menubar=no,left=50,top=50,width=1000,height=600');
             outputData.innerText = code.data;
             outputMessage.hidden = true;
             outputData.parentElement.hidden = false;
